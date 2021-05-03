@@ -1,0 +1,19 @@
+﻿{
+  "vaulthosts": [
+    {
+      "name": "friendlyName",
+      "address": "http://127.0.0.1:8200",
+      "mountpoint": "gcp",
+      "user": {
+        "username": "",
+        "password": ""
+      },
+      "unsealkeys": [
+        "",
+        "",
+        ""
+      ],
+      "unsealtoken": ""
+    }
+  ]
+}
