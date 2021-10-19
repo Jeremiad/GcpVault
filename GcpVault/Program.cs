@@ -99,7 +99,7 @@ namespace GcpVault
                     }
                 }
                 table.AddRow(credentialModel.Type, credentialModel.ProjectId, credentialModel.PrivateKeyId, DateTime.Now.AddSeconds(secret.LeaseDurationSeconds).ToString(), warning);
-                AnsiConsole.Render(table);
+                AnsiConsole.Write(table);
                 await File.WriteAllTextAsync("service_account.json", credential);
             }
 
@@ -108,7 +108,7 @@ namespace GcpVault
 
         private static async void UnSealVault(IVaultClient vaultClient, Vaulthost config)
         {
-            Log.Information("Trying to unlock vault");
+            Log.Information("Trying to unseal vault");
 
             foreach (var key in config.UnsealKeys)
             {
